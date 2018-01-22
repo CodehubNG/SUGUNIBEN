@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "863000775537",
+    "firebase_url": "https://sug-uniben.firebaseio.com",
+    "project_id": "sug-uniben",
+    "storage_bucket": "sug-uniben.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:863000775537:android:cb1e548422d0ec1f",
+        "android_client_info": {
+          "package_name": "codehub.suguniben"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "863000775537-6jj4dj7fsa8cesf09s2uu45huke6lmcr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAC8GuCTXnc0LgPrgXRc3xDaE1EgZCmP8s"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

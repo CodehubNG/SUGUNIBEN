@@ -1,0 +1,426 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="codehub.suguniben.F_NEWS_FEED">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="?android:attr/windowBackground"
+            android:orientation="horizontal"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="5dp">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/windowBackground"
+                android:padding="5dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/windowBackground"
+                    android:orientation="horizontal">
+
+               <!--     <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <ImageButton
+                            android:id="@+id/main_show_sug_post"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:background="@android:color/transparent"
+                            android:foreground="?selectableItemBackground"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/main_sug_gray" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:text="SUG"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/darker_gray"
+                            android:textStyle="bold" />
+                    </LinearLayout>-->
+
+                    <LinearLayout
+                        android:id="@+id/main_show_beauty_postL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="?android:selectableItemBackgroundBorderless"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        tools:ignore="NewApi">
+
+                        <ImageButton
+                            android:id="@+id/main_show_beauty_post"
+                            android:layout_width="18dp"
+                            android:layout_height="21dp"
+                            android:layout_gravity="center"
+                            android:background="@android:color/transparent"
+                            android:foreground="?selectableItemBackground"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/main_beauty_gray" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:text="BEAUTY"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/main_show_comedy_postL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="?android:selectableItemBackgroundBorderless"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        tools:ignore="NewApi">
+
+                        <ImageButton
+                            android:id="@+id/main_show_comedy_post"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_gravity="center"
+                            android:background="@android:color/transparent"
+                            android:foreground="?selectableItemBackground"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/main_comedy_gray" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:text="COMEDY"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/main_show_sport_postL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="?android:selectableItemBackgroundBorderless"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        tools:ignore="NewApi">
+
+                        <ImageButton
+                            android:id="@+id/main_show_sport_post"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_gravity="center"
+                            android:background="@android:color/transparent"
+                            android:foreground="?selectableItemBackground"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/main_sport_gray" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:text="SPORT"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/main_show_roman_postL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="?android:selectableItemBackgroundBorderless"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        tools:ignore="NewApi">
+
+                        <ImageButton
+                            android:id="@+id/main_show_roman_post"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_gravity="center"
+                            android:background="@android:color/transparent"
+                            android:foreground="?selectableItemBackground"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/gray_love" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:text="ROMANCES"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/main_show_music_postL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="?android:selectableItemBackgroundBorderless"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        tools:ignore="NewApi">
+
+                        <ImageButton
+                            android:id="@+id/main_show_music_post"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_gravity="center"
+                            android:background="@android:color/transparent"
+                            android:foreground="?selectableItemBackground"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/main_music_gray" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:text="MUSIC"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/main_show_gossip_postL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="?android:selectableItemBackgroundBorderless"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        tools:ignore="NewApi">
+
+                        <ImageButton
+                            android:id="@+id/main_show_gossip_post"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_gravity="center"
+                            android:background="@android:color/transparent"
+                            android:foreground="?selectableItemBackground"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/main_gossip_gray" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:text="GOSSIP"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/main_show_Fashion_postL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="?android:selectableItemBackgroundBorderless"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        tools:ignore="NewApi">
+
+                        <ImageButton
+                            android:id="@+id/main_show_Fashion_post"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_gravity="center"
+                            android:background="@android:color/transparent"
+                            android:foreground="?selectableItemBackground"
+                            android:scaleType="centerInside"
+
+                            android:src="@drawable/main_fashion_gray" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:text="FASHION"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/main_show_movies_postL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="?android:selectableItemBackgroundBorderless"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        tools:ignore="NewApi">
+
+                        <ImageButton
+                            android:id="@+id/main_show_movies_post"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_gravity="center"
+                            android:background="@android:color/transparent"
+                            android:foreground="?selectableItemBackground"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/main_movies_gray" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:text="MOVIES"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/main_show_inspiration_postL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="?android:selectableItemBackgroundBorderless"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        tools:ignore="NewApi">
+
+                        <ImageButton
+                            android:id="@+id/main_show_inspiration_post"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_gravity="center"
+                            android:background="@android:color/transparent"
+                            android:foreground="?selectableItemBackground"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/main_insipiration_gray" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:text="INSPIRATION"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/main_show_gospel_postL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="?android:selectableItemBackgroundBorderless"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        tools:ignore="NewApi">
+
+                        <ImageButton
+                            android:id="@+id/main_show_gospel_post"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_gravity="center"
+                            android:background="@android:color/transparent"
+                            android:foreground="?selectableItemBackground"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/main_gospel_gray" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:text="GOSPEL"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/main_show_events_postL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="?android:selectableItemBackgroundBorderless"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        tools:ignore="NewApi">
+
+                        <ImageButton
+                            android:id="@+id/main_show_events_post"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_gravity="center"
+                            android:background="@android:color/transparent"
+                            android:foreground="?selectableItemBackground"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/main_event_gray" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:text="EVENTS"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+        </android.support.v7.widget.CardView>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+     <!--   <ProgressBar
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/news_feed_RecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" />
+</RelativeLayout>
+    </LinearLayout>
+
+</FrameLayout>

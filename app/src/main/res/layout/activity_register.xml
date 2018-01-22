@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@android:color/white"
+    tools:context="codehub.suguniben.RegisterActivity">
+    <TextView
+        android:id="@+id/register_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="SUG APP"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"
+        android:textStyle="bold"/>
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/register_header"
+         android:background="@android:color/white"
+         android:orientation="vertical"
+         android:padding="30dp">
+
+         <EditText
+             android:id="@+id/xml_firstName"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginBottom="5dp"
+             android:background="@drawable/input_outline"
+             android:hint="Nickname"
+             android:inputType="textPersonName"
+             android:padding="10dp"/>
+
+
+         <EditText
+             android:id="@+id/xml_email"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginBottom="5dp"
+             android:background="@drawable/input_outline"
+             android:hint="Email"
+             android:inputType="textEmailAddress"
+             android:padding="10dp"/>
+         <EditText
+             android:id="@+id/xml_password"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginBottom="5dp"
+             android:background="@drawable/input_outline"
+             android:fontFamily="sans-serif"
+             android:hint="Password"
+             android:inputType="textPassword"
+             android:padding="10dp" />
+
+         <EditText
+             android:id="@+id/xml_confirmPassword"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginBottom="10dp"
+             android:background="@drawable/input_outline"
+             android:fontFamily="sans-serif"
+             android:hint="Confirm password"
+             android:inputType="textPassword"
+             android:padding="10dp"
+             />
+
+         <Button
+             android:id="@+id/xml_Signup"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginBottom="10dp"
+             android:layout_marginTop="10dp"
+             android:background="@color/colorPrimary"
+             android:text="CREATE ACCOUNT"
+             android:textColor="@android:color/white"/>
+     </LinearLayout>
+
+    <Button
+        android:id="@+id/xml_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/colorPrimary"
+        android:text="Alraedy have an Account? \n Log In"
+        android:textColor="@android:color/white"
+        />
+
+</RelativeLayout>

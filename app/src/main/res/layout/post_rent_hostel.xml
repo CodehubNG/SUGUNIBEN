@@ -1,0 +1,278 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="codehub.suguniben.F_RENT_HOSTEL">
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:background="?android:attr/windowBackground"
+        android:orientation="vertical"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp">
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/part1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/rent_post_property_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/input_outline"
+                    android:hint="Property Name"
+                    android:inputType="text"
+                    android:maxLength="20"
+                    android:padding="15dp"
+                    android:textColorHint="@android:color/black"
+                    android:textSize="12sp" />
+                <EditText
+                    android:id="@+id/rent_post_property_decs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/input_outline"
+                    android:hint="Property Description"
+                    android:inputType="text"
+                    android:maxLength="20"
+                    android:padding="15dp"
+                    android:textColorHint="@android:color/black"
+                    android:textSize="12sp" />
+                <EditText
+                    android:id="@+id/rent_post_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/input_outline"
+                    android:hint="Amount"
+                    android:inputType="number"
+                    android:padding="15dp"
+                    android:textColorHint="@android:color/black"
+                    android:textSize="11sp"
+
+                    />
+
+
+
+
+
+                <EditText
+                    android:id="@+id/rent_post_Address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/input_outline"
+                    android:hint="Address"
+                    android:inputType="textMultiLine"
+                    android:maxLength="500"
+                    android:maxLines="5"
+                    android:padding="15dp"
+                    android:textColor="@android:color/black"
+
+                    android:textColorHint="@android:color/black"
+                    android:textSize="11sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingStart="15dp"
+                        android:text="Tel:"
+                        android:textColor="@android:color/black" />
+
+                    <EditText
+                        android:id="@+id/rent_post_tel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/input_outline"
+                        android:gravity="center"
+                        android:inputType="phone"
+                        android:padding="15dp"
+                        android:text="+234"
+                        android:textColorHint="@android:color/black"
+                        android:textSize="11sp"
+
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Must add three photo"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:elevation="10dp"
+                        tools:targetApi="lollipop">
+
+                        <ImageButton
+                            android:id="@+id/rent_post_img1"
+                            android:layout_width="50dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentStart="true"
+                            android:background="?android:selectableItemBackgroundBorderless"
+                            android:padding="5dp"
+                            android:scaleType="centerInside"
+                            app:srcCompat="@drawable/add_image"
+                            tools:ignore="NewApi" />
+
+                        <TextView
+                            android:id="@+id/rent_post_text1"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_alignParentTop="true"
+                            android:background="?android:selectableItemBackground"
+                            android:gravity="center"
+                            android:text="Add Photo"
+                            android:textColor="@android:color/black"
+                            android:textSize="11sp"
+                            tools:ignore="SmallSp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:elevation="10dp"
+                        tools:targetApi="lollipop">
+
+                        <ImageButton
+                            android:id="@+id/rent_post_img2"
+                            android:layout_width="50dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentStart="true"
+                            android:background="?android:selectableItemBackgroundBorderless"
+                            android:padding="5dp"
+                            android:scaleType="centerInside"
+                            app:srcCompat="@drawable/add_image"
+                            tools:ignore="NewApi" />
+
+                        <TextView
+                            android:id="@+id/rent_post_text2"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_alignParentTop="true"
+                            android:background="?android:selectableItemBackground"
+                            android:gravity="center"
+                            android:text="Add Photo"
+                            android:textColor="@android:color/black"
+                            android:textSize="11sp"
+                            tools:ignore="SmallSp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:elevation="10dp"
+                        tools:targetApi="lollipop">
+
+                        <ImageButton
+                            android:id="@+id/rent_post_img3"
+                            android:layout_width="50dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentStart="true"
+                            android:background="?android:selectableItemBackgroundBorderless"
+                            android:padding="5dp"
+                            android:scaleType="centerInside"
+                            app:srcCompat="@drawable/add_image"
+                            tools:ignore="NewApi" />
+
+                        <TextView
+                            android:id="@+id/rent_post_text3"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_alignParentTop="true"
+                            android:background="?android:selectableItemBackground"
+                            android:gravity="center"
+                            android:text="Add Photo"
+                            android:textColor="@android:color/black"
+                            android:textSize="11sp"
+                            tools:ignore="SmallSp" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:padding="10dp">
+
+                    <Button
+                        android:id="@+id/sell_post_clearImages"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?android:selectableItemBackgroundBorderless"
+                        android:text="CLEAR IMAGE"
+                        android:textColor="@color/colorPrimary"
+                        tools:ignore="NewApi" />
+
+                    <ProgressBar
+                        android:id="@+id/post_rent_house_progress_bar"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:visibility="gone"
+                        android:layout_alignParentEnd="true"
+                        android:foregroundGravity="center"
+                        android:layout_centerInParent="true"
+                        android:layout_marginEnd="30dp" />
+                    <Button
+                        android:id="@+id/sell_UPLOAD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:background="?android:selectableItemBackgroundBorderless"
+                        android:text="Sell"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp"
+                        tools:ignore="NewApi" />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
+

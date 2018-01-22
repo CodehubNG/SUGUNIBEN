@@ -1,0 +1,76 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="codehub.suguniben.Frag_Sug_Update">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:elevation="2dp"
+            ads:cardCornerRadius="10dp"
+            tools:targetApi="lollipop">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="50dp"
+                    android:layout_height="50dp">
+
+                    <ImageButton
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:maxHeight="50dp"
+                        android:padding="12dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/edit" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/sug_update_new_post"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:foreground="?android:selectableItemBackgroundBorderless"
+                    android:padding="10dp"
+                    android:text="Say something ..."
+                    android:textColor="@color/black_overlay"
+                    tools:ignore="NewApi" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list_of_news"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white" />
+
+    </LinearLayout>
+
+
+    <!--   <com.google.android.gms.ads.AdView
+           android:id="@+id/adView"
+           android:layout_width="match_parent"
+           android:layout_height="50dp"
+           android:layout_alignParentBottom="true"
+           android:layout_alignParentStart="true"
+           android:background="@android:color/white"
+           ads:adSize="BANNER"
+           ads:adUnitId="ca-app-pub-7147276191926139/7665128106">
+       </com.google.android.gms.ads.AdView>-->
+
+</FrameLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+   <!-- <item
+        android:id="@+id/app_bar_search"
+        app:showAsAction="always"
+        android:actionViewClass="android.widget.SearchView"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:title="Search"
+        tools:ignore="AppCompatResource" />
+
+    <item
+        android:id="@+id/action_Sale_property"
+        android:orderInCategory="100"
+        android:title="Sale Property"
+        app:showAsAction="always" />-->
+    <item
+        android:id="@+id/action_logOut"
+        android:orderInCategory="100"
+        android:title="Log Out"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_Exit"
+        android:orderInCategory="100"
+        android:title="Quit"
+        app:showAsAction="never" />
+</menu>

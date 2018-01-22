@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_sug_update"
+        android:icon="@drawable/sugupdate"
+        android:title="Sug Update" />
+
+        <item
+            android:id="@+id/nav_newsFeed"
+            android:icon="@drawable/news"
+            android:title="News Feed" />
+    <item
+        android:id="@+id/nav_search"
+        android:icon="@drawable/search"
+        android:title="Search" />
+        <item
+            android:id="@+id/nav_Buy_Sell"
+            android:icon="@drawable/sell"
+            android:title="Buy/ Sell" />
+
+
+
+        <item
+            android:id="@+id/nav_Accomodation"
+            android:icon="@drawable/home"
+            android:title="Accomodation" />
+
+
+  <!--  <item
+        android:id="@+id/nav_football"
+        android:icon="@drawable/football"
+        android:title="Football" />-->
+
+
+
+</menu>

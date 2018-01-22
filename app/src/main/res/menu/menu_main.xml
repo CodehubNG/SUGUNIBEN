@@ -1,0 +1,37 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    
+    tools:context="codehub.sugupdate.MainActivity">
+   <item
+        android:id="@+id/action_profile"
+        android:icon="@drawable/user"
+        android:orderInCategory="100"
+        android:title="Profile"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_add"
+        android:icon="@drawable/add"
+        android:orderInCategory="100"
+        android:title="Add Post"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_logOut"
+        android:icon="@drawable/logout"
+        android:orderInCategory="100"
+        android:title="Log Out"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_about"
+        android:icon="@drawable/user"
+        android:orderInCategory="100"
+        android:title="About"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_exit"
+        android:icon="@drawable/user"
+        android:orderInCategory="100"
+        android:title="Quit"
+        app:showAsAction="never" />
+
+</menu>

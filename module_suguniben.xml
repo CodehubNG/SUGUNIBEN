@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_suguniben" default="compile.module.suguniben">
+    <dirname file="${ant.file.module_suguniben}" property="module.suguniben.basedir" />
+
+    <property name="module.jdk.home.suguniben" value="${project.jdk.home}" />
+    <property name="module.jdk.bin.suguniben" value="${project.jdk.bin}" />
+    <property name="module.jdk.classpath.suguniben" value="${project.jdk.classpath}" />
+
+    <property name="compiler.args.suguniben"
+        value="-encoding UTF-8 -source 1.7 -target 1.7 ${compiler.args}" />
+
+    <property name="suguniben.output.dir"
+        value="${module.suguniben.basedir}/build/classes/production/SUGUNIBEN" />
+    <property name="suguniben.testoutput.dir"
+        value="${module.suguniben.basedir}/build/classes/test/SUGUNIBEN" />
+
+    <path id="suguniben.module.bootclasspath">
+        <!-- Paths to be included in compilation bootclasspath -->
+    </path>
+
+    <path id="suguniben.module.production.classpath">
+        <path refid="${module.jdk.classpath.suguniben}" />
+    </path>
+
+    <path id="suguniben.runtime.production.module.classpath">
+        <pathelement location="${suguniben.output.dir}" />
+    </path>
+
+    <path id="suguniben.module.classpath">
+        <path refid="${module.jdk.classpath.suguniben}" />
+        <pathelement location="${suguniben.output.dir}" />
+    </path>
+
+    <path id="suguniben.runtime.module.classpath">
+        <pathelement location="${suguniben.testoutput.dir}" />
+        <pathelement location="${suguniben.output.dir}" />
+    </path>
+
+
+    <patternset id="excluded.from.module.suguniben">
+        <patternset refid="ignored.files" />
+    </patternset>
+
+    <patternset id="excluded.from.compilation.suguniben">
+        <patternset refid="excluded.from.module.suguniben" />
+    </patternset>
+
+
+    <target name="compile.module.suguniben"
+        depends="compile.module.suguniben.production,compile.module.suguniben.tests"
+        description="Compile module SUGUNIBEN" />
+
+    <target name="compile.module.suguniben.production" depends="register.custom.compilers"
+        description="Compile module SUGUNIBEN; production classes" />
+
+    <target name="compile.module.suguniben.tests"
+        depends="register.custom.compilers,compile.module.suguniben.production"
+        description="compile module SUGUNIBEN; test classes" unless="skip.tests" />
+
+    <target name="clean.module.suguniben" description="cleanup module">
+        <delete dir="${suguniben.output.dir}" />
+        <delete dir="${suguniben.testoutput.dir}" />
+    </target>
+</project>
