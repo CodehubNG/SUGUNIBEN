@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,270 +8,237 @@
     tools:context="codehub.suguniben.PostActitvity">
 
 
-    <RelativeLayout
+    <android.support.v7.widget.CardView
         android:id="@+id/post_ui_one"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="1dp"
-                android:background="@color/whiet"
-                android:orientation="vertical"
-                android:paddingTop="15dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="4dp"
-                    android:background="@color/whiet"
-                    android:orientation="vertical">
-
-                    <EditText
-                        android:id="@+id/xml_title"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentStart="true"
-                        android:layout_marginTop="10dp"
-                        android:allowUndo="true"
-                        android:autoLink="all"
-                        android:background="@drawable/input_outline"
-                        android:ems="10"
-                        android:hint="Post Title"
-                        android:inputType="textPersonName"
-                        android:padding="10dp"
-                        android:textSize="14dp" />
-
-                    <EditText
-                        android:id="@+id/xml_desc"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/xml_title"
-                        android:layout_marginBottom="20dp"
-                        android:layout_marginTop="5dp"
-                        android:allowUndo="true"
-                        android:autoLink="all"
-                        android:background="@drawable/input_outline"
-                        android:ems="10"
-                        android:hint="Post Description"
-                        android:inputType="textMultiLine"
-                        android:maxHeight="100dp"
-                        android:padding="10dp"
-                        android:textSize="14dp" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/photo" />
-
-                        <Button
-                            android:id="@+id/post_add_photo"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@color/whiet"
-                            android:paddingLeft="10dp"
-                            android:text="Add Photo"
-                            android:textAlignment="textStart"
-                            android:textColor="@color/colorPrimary"
-                            android:textStyle="bold" />
-                    </LinearLayout>
-                </LinearLayout>
-
-                <ImageButton
-                    android:id="@+id/imageButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:adjustViewBounds="true"
-                    android:background="@android:color/white"
-                    android:elevation="10dp"
-                    android:maxHeight="200dp"
-                    android:requiresFadingEdge="vertical"
-                    android:scaleType="centerCrop" />
-
-
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:orientation="vertical">
-
-
-            <Button
-                android:id="@+id/post_select_feed"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:background="@color/colorPrimary"
-                android:text="CONTINUE"
-                android:textAlignment="center"
-                android:textColor="@android:color/white"
-                android:textSize="12dp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/post_ui_two"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/black_overlay_two"
-
-        android:visibility="gone">
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="20dp"
+        app:cardBackgroundColor="@color/whiet"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        app:contentPadding="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:layout_marginBottom="1dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
             android:background="@color/whiet"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="5dp">
 
-            <TextView
+            <EditText
+                android:id="@+id/xml_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/input_outline"
+                android:fontFamily="sans-serif"
+                android:hint="Say Something"
+                android:inputType="textMultiLine"
+                android:maxLines="5"
                 android:padding="10dp"
-                android:text="SELECT FEED"
-                android:textAlignment="center"
+                android:textStyle="normal" />
+
+            <Button
+                android:id="@+id/post_add_photo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:selectableItemBackground"
+                android:paddingLeft="10dp"
+                android:text="Add Photo"
+                android:textAlignment="textStart"
                 android:textColor="@color/colorPrimary"
-                android:textSize="14sp"
                 android:textStyle="bold" />
 
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="200dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <RadioGroup
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center"
-                        android:orientation="vertical"
-                        android:paddingBottom="10dp"
-                        android:paddingTop="10dp">
-
-                        <RadioButton
-                            android:id="@+id/post_act_rad_sug_update"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:checked="false"
-                            android:text="Sug Update" />
-
-                        <RadioButton
-                            android:id="@+id/post_act_rad_sports"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Sports" />
-
-                        <RadioButton
-                            android:id="@+id/post_act_rad_Romances"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Romances" />
-
-                        <RadioButton
-                            android:id="@+id/post_act_rad_Gossip"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Gossip" />
-
-                        <RadioButton
-                            android:id="@+id/post_act_rad_Fashion"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Fashion" />
-
-                        <RadioButton
-                            android:id="@+id/post_act_rad_Music"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Music" />
-
-                        <RadioButton
-                            android:id="@+id/post_act_rad_Comedy"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Comedy" />
-
-                        <RadioButton
-                            android:id="@+id/post_act_rad_Beauty"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Beauty" />
-
-                        <RadioButton
-                            android:id="@+id/post_act_rad_Events"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Events" />
-
-                        <RadioButton
-                            android:id="@+id/post_act_rad_Movies"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Movies" />
-
-                        <RadioButton
-                            android:id="@+id/post_act_rad_Inspiration"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Inspiration" />
-
-                        <RadioButton
-                            android:id="@+id/post_act_rad_Gospel"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Gospel" />
-                    </RadioGroup>
-                </LinearLayout>
-            </ScrollView>
-
-            <LinearLayout
-                android:id="@+id/xmlPos"
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/colorPrimary">
+                android:maxHeight="200dp">
 
                 <Button
-                    android:id="@+id/xml_btn_post"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:background="@color/whiet"
-                    android:text="POST"
-                    android:textAlignment="center"
+                    android:id="@+id/post_select_feed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:background="?android:selectableItemBackgroundBorderless"
+                    android:text="Continue"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="12dp"
-                    android:textStyle="bold" />
-            </LinearLayout>
+                    tools:ignore="NewApi" />
+
+                <ImageButton
+                    android:id="@+id/post_selected_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/whiet"
+                    android:elevation="10dp"
+                    android:maxHeight="200dp"
+                    android:padding="5dp"
+                    android:scaleType="centerCrop"
+
+
+                    />
+
+
+            </RelativeLayout>
+
         </LinearLayout>
 
-    </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/post_ui_two"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:cardBackgroundColor="@color/black_overlay"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/whiet"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="SELECT FEED"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:orientation="vertical"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp">
+
+                            <RadioButton
+                                android:id="@+id/post_act_rad_sug_update"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:checked="false"
+                                android:text="Sug Update" />
+
+                            <RadioButton
+                                android:id="@+id/post_act_rad_sports"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Sports" />
+
+                            <RadioButton
+                                android:id="@+id/post_act_rad_Romances"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Romances" />
+
+                            <RadioButton
+                                android:id="@+id/post_act_rad_Gossip"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Gossip" />
+
+                            <RadioButton
+                                android:id="@+id/post_act_rad_Fashion"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Fashion" />
+
+                            <RadioButton
+                                android:id="@+id/post_act_rad_Music"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Music" />
+
+                            <RadioButton
+                                android:id="@+id/post_act_rad_Comedy"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Comedy" />
+
+                            <RadioButton
+                                android:id="@+id/post_act_rad_Beauty"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Beauty" />
+
+                            <RadioButton
+                                android:id="@+id/post_act_rad_Events"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Events" />
+
+                            <RadioButton
+                                android:id="@+id/post_act_rad_Movies"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Movies" />
+
+                            <RadioButton
+                                android:id="@+id/post_act_rad_Inspiration"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Inspiration" />
+
+                            <RadioButton
+                                android:id="@+id/post_act_rad_Gospel"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Gospel" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </ScrollView>
+
+                <LinearLayout
+                    android:id="@+id/xmlPos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary">
+
+                    <Button
+                        android:id="@+id/xml_btn_post"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/whiet"
+                        android:text="POST"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
 
 
 </RelativeLayout>

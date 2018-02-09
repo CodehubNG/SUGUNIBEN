@@ -5,13 +5,15 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/whiet"
     android:orientation="vertical"
     tools:context="codehub.suguniben.My_Main_Activity">
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="50dp"
     android:background="@color/colorPrimary"
-    android:elevation="10dp">
+    android:elevation="10dp"
+    tools:ignore="UnusedAttribute">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -46,14 +48,14 @@
                 android:id="@+id/main_user_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
                 android:layout_centerVertical="true"
-                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
                 android:gravity="center"
-                android:maxLength="15"
+                android:maxLength="20"
                 android:padding="5dp"
-                android:text=""
                 android:textColor="@android:color/white"
-                android:textSize="14sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <ImageButton
@@ -69,8 +71,7 @@
                 android:scaleType="centerCrop"
                 android:src="@drawable/notification"
                 android:visibility="gone"
-
-                />
+                tools:ignore="NewApi" />
         </RelativeLayout>
 
 
@@ -91,19 +92,32 @@
         android:padding="15dp"
         android:scaleType="centerCrop"
         android:src="@drawable/three_dot"
+        tools:ignore="NewApi"
 
         />
 </RelativeLayout>
-    <!--
+
     <LinearLayout
-        android:id="@+id/main_uploading_layout"
-        android:orientation="horizontal"
+        android:id="@+id/main_upload_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
         android:animateLayoutChanges="true"
         android:elevation="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            tools:ignore="UnusedAttribute">
         <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/main_uploading"
+            android:id="@+id/main_upload_image"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:background="@color/whiet"
@@ -112,49 +126,40 @@
             android:id="@+id/main_upload_message"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Uploading Post ...."
-            android:textStyle="bold"
+            android:gravity="center"
+            android:text="uploading post ...."
             android:textAlignment="center"
-            android:gravity="center"/>
-    </LinearLayout>-->
-    <RelativeLayout
-        android:id="@+id/main_network_layout"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            tools:ignore="RtlCompat" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/main_upload_progessbar"
+            style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-       android:visibility="gone"
-        android:background="@color/light_red"
-        android:orientation="horizontal">
+            android:layout_height="10dp"
+            android:backgroundTint="@color/light_red"
+            android:foregroundGravity="center"
+            android:foregroundTint="@color/light_red"
+            android:indeterminate="true"
+            tools:ignore="UnusedAttribute" />
 
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/network" />
+    </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:padding="5dp"
-            android:text="No Internet Access"
-            android:textColor="@color/whiet"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-
-
-    </RelativeLayout>
-
+    <include layout="@layout/network_layout" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:visibility="gone">
+        android:orientation="vertical">
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimaryDark"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:visibility="gone">
 
             <LinearLayout
                 android:layout_width="match_parent"

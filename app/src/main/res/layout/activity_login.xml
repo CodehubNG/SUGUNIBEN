@@ -3,7 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/whiet"
     tools:context="codehub.suguniben.LoginActivity">
+    <!--
 
    <TextView
        android:id="@+id/login_header"
@@ -31,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
             android:background="@drawable/input_outline"
-            android:hint="Email Address"
+            android:hint="Email"
             android:inputType="textEmailAddress"
             android:padding="15dp"/>
         <EditText
@@ -77,6 +79,6 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:background="@color/colorPrimary"
-        android:text="NEED AN ACCOUNT"
-        android:textColor="@android:color/white" />
+        android:text="CREATE AN ACCOUNT"
+        android:textColor="@android:color/white" />-->
 </RelativeLayout>

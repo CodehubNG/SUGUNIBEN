@@ -11,7 +11,7 @@
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="300dp"
         android:fitsSystemWindows="true"
 
         android:theme="@style/AppTheme.AppBarOverlay">
@@ -31,13 +31,20 @@
                 android:adjustViewBounds="true"
                 android:background="?android:selectableItemBackground"
                 android:scaleType="centerCrop" />
-            <android.support.v7.widget.Toolbar
-                android:id="@+id/toolbar"
+
+            <TextView
+                android:id="@+id/Profile_account_name"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
+                android:layout_gravity="bottom"
+                android:paddingStart="5dp"
+                android:shadowColor="@color/black_overlay"
+                android:shadowRadius="3"
+                android:text="Profile"
+                android:textColor="@color/whiet"
+                android:textSize="40sp"
                 app:layout_collapseMode="parallax"
-                app:popupTheme="@style/AppTheme.PopupOverlay"
-                app:title="te" />
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
 
         </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>
@@ -45,12 +52,13 @@
     <include
         android:id="@+id/include"
         layout="@layout/content_profile" />
-<TextView
-    android:id="@+id/profile_post_id_holder"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:visibility="gone"
-    />
+
+    <TextView
+        android:id="@+id/profile_post_id_holder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
@@ -83,31 +91,5 @@
           android:visibility="visible"
           app:srcCompat="@drawable/add" />
   -->
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_anchor="@+id/include"
-        app:layout_anchorGravity="center|bottom">
 
-        <ProgressBar
-            android:id="@+id/progressBar2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_gravity="center_vertical|center_horizontal"
-            android:visibility="invisible"
-            app:layout_anchorGravity="center_vertical|center_horizontal" />
-
-        <TextView
-            android:id="@+id/profile_NO_POST"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_gravity="center_vertical|center_horizontal"
-            android:text="NO POST"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:visibility="invisible"
-            app:layout_anchorGravity="center_vertical|center_horizontal" />
-    </RelativeLayout>
 </android.support.design.widget.CoordinatorLayout>

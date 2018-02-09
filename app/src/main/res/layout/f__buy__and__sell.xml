@@ -3,7 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/whiet"
     tools:context="codehub.suguniben.F_BUY_AND_SELL">
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,49 +17,54 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="5dp"
             android:layout_marginTop="10dp"
             android:background="@color/black_overlay"
             android:foregroundGravity="bottom"
             android:gravity="bottom"
             android:paddingLeft="10dp"
             app:cardCornerRadius="10dp"
-            app:cardElevation="10dp">
+            app:cardElevation="2dp">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
 
                 <EditText
                     android:id="@+id/buy_sell_search_name"
-                    android:layout_width="293dp"
-                    android:layout_height="match_parent"
-                    android:background="?android:selectableItemBackgroundBorderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
                     android:hint="Search:"
                     android:inputType="text"
                     android:maxLength="290"
                     android:maxLines="1"
                     android:maxWidth="260dp"
                     android:padding="5dp"
+                    android:textAllCaps="true"
                     android:textSize="12sp"
                     tools:ignore="NewApi" />
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/buy_sell_search"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
                     android:layout_gravity="center"
                     android:background="?android:selectableItemBackground"
                     android:src="@mipmap/search_icon"
                     tools:ignore="NewApi" />
-            </LinearLayout>
+            </RelativeLayout>
         </android.support.v7.widget.CardView>
 
-        <ScrollView
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefresh"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:foregroundTint="@color/light_red">
 
-            <LinearLayout
+            <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
@@ -69,7 +76,8 @@
                     <android.support.v7.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginStart="5dp"
                         android:elevation="10dp"
                         app:cardCornerRadius="10dp">
 
@@ -98,18 +106,169 @@
                                 android:layout_height="match_parent"
                                 android:background="?android:selectableItemBackground"
                                 android:padding="5dp"
-                                android:text="Do you want too  sale your Gadget and Accessories ?" />
+                                android:text="Sell your Items?" />
                         </LinearLayout>
                     </android.support.v7.widget.CardView>
+
+                    <Button
+                        android:id="@+id/sell_promote"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="?android:selectableItemBackground"
+                        android:shadowColor="@color/colorPrimary"
+                        android:shadowRadius="5"
+                        android:text="Promote"
+                        android:textColor="@color/light_green"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:padding="5dp"
+                        android:text="Hot Deals"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/sell_hot_deals_RECYLERvIEW"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp" />
 
                     <android.support.v7.widget.RecyclerView
                         android:id="@+id/sell_RecylerVieww"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" />
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                        app:reverseLayout="true" />
                 </LinearLayout>
-            </LinearLayout>
-        </ScrollView>
 
-
+            </ScrollView>
+        </android.support.v4.widget.SwipeRefreshLayout>
     </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/sell_layout_2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/whiet"
+        android:visibility="gone">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/whiet"
+            android:foregroundGravity="bottom"
+            android:gravity="bottom"
+            android:paddingLeft="10dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="2dp"
+            app:cardUseCompatPadding="true">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                android:scrollIndicators="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/whiet"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/sell_layout_2_img1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:background="@android:color/black" />
+
+                    <!--     <ImageView
+                             android:id="@+id/sell_layout_2_img2"
+                             android:layout_width="300dp"
+                             android:layout_height="200dp"
+                             android:adjustViewBounds="true"
+                             android:background="@android:color/black" />
+
+                         <ImageView
+                             android:id="@+id/sell_layout_2_img3"
+                             android:layout_width="300dp"
+                             android:layout_height="200dp"
+                             android:adjustViewBounds="true"
+                             android:background="@android:color/black" />-->
+
+
+                    <TextView
+                        android:id="@+id/sell_layout_2_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autoLink="all"
+                        android:inputType="textMultiLine"
+                        android:maxLines="10"
+                        android:paddingBottom="5dp"
+                        android:paddingEnd="10dp"
+                        android:paddingStart="10dp"
+                        android:paddingTop="10dp"
+                        android:text="@string/large_text"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/sell_layout_2_time_posted_ago"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:padding="2dp"
+                        android:text=""
+                        android:textSize="11sp"
+                        android:textStyle="normal" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp">
+
+                        <ImageButton
+                            android:id="@+id/sell_layout_2_contact"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginEnd="10dp"
+                            android:background="?android:selectableItemBackgroundBorderless"
+                            android:padding="10dp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/sell_phone"
+                            tools:ignore="NewApi" />
+
+
+                        <ImageButton
+                            android:id="@+id/sell_layout_2_close"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginStart="5dp"
+                            android:background="?android:selectableItemBackgroundBorderless"
+                            android:padding="10dp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/delete"
+                            tools:ignore="NewApi" />
+
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </ScrollView>
+
+        </android.support.v7.widget.CardView>
+
+
+    </RelativeLayout>
+
 </FrameLayout>

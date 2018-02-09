@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/whiet"
     tools:context="codehub.suguniben.F_RENT_HOSTEL">
 
 
@@ -38,8 +39,9 @@
                     android:background="@drawable/input_outline"
                     android:hint="Property Name"
                     android:inputType="text"
-                    android:maxLength="20"
+                    android:maxLength="30"
                     android:padding="15dp"
+                    android:textAllCaps="true"
                     android:textColorHint="@android:color/black"
                     android:textSize="12sp" />
                 <EditText
@@ -49,8 +51,8 @@
                     android:layout_marginBottom="5dp"
                     android:background="@drawable/input_outline"
                     android:hint="Property Description"
-                    android:inputType="text"
-                    android:maxLength="20"
+                    android:inputType="textMultiLine"
+                    android:maxLines="5"
                     android:padding="15dp"
                     android:textColorHint="@android:color/black"
                     android:textSize="12sp" />
@@ -61,7 +63,7 @@
                     android:layout_marginBottom="5dp"
                     android:background="@drawable/input_outline"
                     android:hint="Amount"
-                    android:inputType="number"
+                    android:inputType="text"
                     android:padding="15dp"
                     android:textColorHint="@android:color/black"
                     android:textSize="11sp"
@@ -78,13 +80,12 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
                     android:background="@drawable/input_outline"
-                    android:hint="Address"
+                    android:hint="Location e.g EDPA, Ekosodin"
                     android:inputType="textMultiLine"
                     android:maxLength="500"
                     android:maxLines="5"
                     android:padding="15dp"
                     android:textColor="@android:color/black"
-
                     android:textColorHint="@android:color/black"
                     android:textSize="11sp" />
 
@@ -166,71 +167,71 @@
                             tools:ignore="SmallSp" />
                     </RelativeLayout>
 
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:elevation="10dp"
-                        tools:targetApi="lollipop">
+                    <!--   <RelativeLayout
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_marginBottom="5dp"
+                           android:layout_marginLeft="10dp"
+                           android:layout_marginRight="10dp"
+                           android:elevation="10dp"
+                           tools:targetApi="lollipop">
 
-                        <ImageButton
-                            android:id="@+id/rent_post_img2"
-                            android:layout_width="50dp"
-                            android:layout_height="30dp"
-                            android:layout_alignParentStart="true"
-                            android:background="?android:selectableItemBackgroundBorderless"
-                            android:padding="5dp"
-                            android:scaleType="centerInside"
-                            app:srcCompat="@drawable/add_image"
-                            tools:ignore="NewApi" />
+                           <ImageButton
+                               android:id="@+id/rent_post_img2"
+                               android:layout_width="50dp"
+                               android:layout_height="30dp"
+                               android:layout_alignParentStart="true"
+                               android:background="?android:selectableItemBackgroundBorderless"
+                               android:padding="5dp"
+                               android:scaleType="centerInside"
+                               app:srcCompat="@drawable/add_image"
+                               tools:ignore="NewApi" />
 
-                        <TextView
-                            android:id="@+id/rent_post_text2"
-                            android:layout_width="match_parent"
-                            android:layout_height="30dp"
-                            android:layout_alignParentTop="true"
-                            android:background="?android:selectableItemBackground"
-                            android:gravity="center"
-                            android:text="Add Photo"
-                            android:textColor="@android:color/black"
-                            android:textSize="11sp"
-                            tools:ignore="SmallSp" />
-                    </RelativeLayout>
+                           <TextView
+                               android:id="@+id/rent_post_text2"
+                               android:layout_width="match_parent"
+                               android:layout_height="30dp"
+                               android:layout_alignParentTop="true"
+                               android:background="?android:selectableItemBackground"
+                               android:gravity="center"
+                               android:text="Add Photo"
+                               android:textColor="@android:color/black"
+                               android:textSize="11sp"
+                               tools:ignore="SmallSp" />
+                       </RelativeLayout>
 
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:elevation="10dp"
-                        tools:targetApi="lollipop">
+                       <RelativeLayout
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_marginBottom="5dp"
+                           android:layout_marginLeft="10dp"
+                           android:layout_marginRight="10dp"
+                           android:elevation="10dp"
+                           tools:targetApi="lollipop">
 
-                        <ImageButton
-                            android:id="@+id/rent_post_img3"
-                            android:layout_width="50dp"
-                            android:layout_height="30dp"
-                            android:layout_alignParentStart="true"
-                            android:background="?android:selectableItemBackgroundBorderless"
-                            android:padding="5dp"
-                            android:scaleType="centerInside"
-                            app:srcCompat="@drawable/add_image"
-                            tools:ignore="NewApi" />
+                           <ImageButton
+                               android:id="@+id/rent_post_img3"
+                               android:layout_width="50dp"
+                               android:layout_height="30dp"
+                               android:layout_alignParentStart="true"
+                               android:background="?android:selectableItemBackgroundBorderless"
+                               android:padding="5dp"
+                               android:scaleType="centerInside"
+                               app:srcCompat="@drawable/add_image"
+                               tools:ignore="NewApi" />
 
-                        <TextView
-                            android:id="@+id/rent_post_text3"
-                            android:layout_width="match_parent"
-                            android:layout_height="30dp"
-                            android:layout_alignParentTop="true"
-                            android:background="?android:selectableItemBackground"
-                            android:gravity="center"
-                            android:text="Add Photo"
-                            android:textColor="@android:color/black"
-                            android:textSize="11sp"
-                            tools:ignore="SmallSp" />
-                    </RelativeLayout>
+                           <TextView
+                               android:id="@+id/rent_post_text3"
+                               android:layout_width="match_parent"
+                               android:layout_height="30dp"
+                               android:layout_alignParentTop="true"
+                               android:background="?android:selectableItemBackground"
+                               android:gravity="center"
+                               android:text="Add Photo"
+                               android:textColor="@android:color/black"
+                               android:textSize="11sp"
+                               tools:ignore="SmallSp" />
+                       </RelativeLayout>-->
 
                 </LinearLayout>
 
@@ -253,11 +254,11 @@
                         android:id="@+id/post_rent_house_progress_bar"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:visibility="gone"
                         android:layout_alignParentEnd="true"
-                        android:foregroundGravity="center"
                         android:layout_centerInParent="true"
-                        android:layout_marginEnd="30dp" />
+                        android:layout_marginEnd="30dp"
+                        android:foregroundGravity="center"
+                        android:visibility="gone" />
                     <Button
                         android:id="@+id/sell_UPLOAD"
                         android:layout_width="wrap_content"

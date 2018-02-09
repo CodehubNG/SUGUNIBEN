@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/whiet"
     tools:context="codehub.suguniben.SingleActivity">
 
 
@@ -54,71 +55,7 @@
                     android:textStyle="bold" />
             </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/signle_unknow1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/colorPrimary"
-                android:orientation="horizontal"
-                android:padding="5dp"
-                android:weightSum="1">
 
-                <ImageButton
-                    android:id="@+id/single_btn_like"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_marginRight="20dp"
-                    android:background="@android:color/transparent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/single_like" />
-
-                <TextView
-                    android:id="@+id/single_like_num"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="0.10"
-                    android:text="@string/_1230"
-                    android:textColor="@android:color/white"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
-
-                <ImageButton
-                    android:id="@+id/single_btn_sharePost"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_marginLeft="20dp"
-                    android:background="@android:color/transparent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/send_w" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="Share"
-                    android:textColor="@android:color/white"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/single_view_num"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="20dp"
-                    android:text="1230"
-                    android:textColor="@android:color/white"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text=" views"
-                    android:textColor="@android:color/white"
-                    android:textStyle="bold" />
-            </LinearLayout>
 
         </LinearLayout>
     </android.support.v7.widget.CardView>
@@ -126,9 +63,8 @@
     <ScrollView
         android:id="@+id/single_scrool"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_below="@id/single_userId"
-
         android:background="@android:color/white">
        <LinearLayout
            android:layout_width="match_parent"
@@ -137,7 +73,7 @@
            <LinearLayout
                android:id="@+id/single_layout_like"
                android:layout_width="match_parent"
-               android:layout_height="wrap_content"
+               android:layout_height="match_parent"
                android:background="@android:color/white"
                android:orientation="vertical"
                android:weightSum="1">
@@ -148,6 +84,7 @@
                    android:layout_height="wrap_content"
                    android:adjustViewBounds="true"
                    android:background="@android:color/black"
+                   android:maxHeight="200dp"
                    android:scaleType="centerCrop"
                    />
 
@@ -163,27 +100,6 @@
                    android:textColor="@android:color/black"
                    android:textSize="15sp"
                    android:textStyle="bold" />
-               <TextView
-                   android:id="@+id/single_post_desc"
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:autoLink="all"
-                   android:background="@android:color/white"
-                   android:padding="5dp"
-                   android:text="Description"
-                   android:textColor="@android:color/black"
-                   android:textSize="14sp"
-                   android:textStyle="normal" />
-               <TextView
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:layout_marginBottom="20dp"
-                   android:layout_marginTop="20dp"
-                   android:background=   "@color/gray"
-                   android:padding="5dp"
-                   android:text="Comments"
-                   android:textColor="@android:color/black"
-                   android:textSize="14sp"/>
 
                <android.support.v7.widget.RecyclerView
                    android:id="@+id/singel_commentList"

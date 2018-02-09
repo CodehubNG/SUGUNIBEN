@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/whiet"
     tools:context="codehub.suguniben.Big_Image">
 <LinearLayout
     android:layout_width="match_parent"
@@ -13,8 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:adjustViewBounds="true"
-        android:background="@android:color/black"
-        android:src="@drawable/loading"/>
+        android:background="@android:color/black" />
 
 </LinearLayout>
 </RelativeLayout>
